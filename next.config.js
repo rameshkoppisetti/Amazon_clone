@@ -11,6 +11,6 @@ module.exports = {
         ],
     },
     env: {
-        stripe_public_key: "pk_test_51JIq3XSBSwM9xOe7OjueFSo3yRtpifPYG16An3qssfVEAS1QRmd66lTmydBYoI22mNfEHbSNgA2VusZqsAVuwzdB00A1wHaJwu",
+        stripe_public_key: STRIPE_PUBLIC_KEY,
     },
 };
