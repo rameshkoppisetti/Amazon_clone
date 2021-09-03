@@ -11,9 +11,9 @@ const app = !admin.apps.length
   : admin.app();
 
 //Establishing  a connection  to stripe
-const stripe = require("stripe")("sk_test_51JIq3XSBSwM9xOe7MX9Px9PTQgHu7EXFIhy4VJ8D9dZdq0ASNBAMtfAROQn0z48YBt8b4WJKcHJdWtVPMyNZz45a00d2Q2esfG");
+const stripe = require("stripe")(process.env.STRIPE_SECRET_KEY);
 
-const endpointSecret = "whsec_s2nduH0s3DBFLmdWOs7RORCMOPPTYVZG";
+const endpointSecret = process.env.STRIPE_SIGNING_SECRET;
 
 const fulfillOrder = async (session) => {
   console.log("Fulfilling order", session);
