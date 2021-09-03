@@ -1,5 +1,16 @@
 module.exports = {
     images: {
-        domains: ["links.papareact.com", "fakestoreapi.com", "m.media-amazon.com"],
+        domains: [
+            "cdn.dribbble.com",
+            "links.papareact.com",
+            "fakestoreapi.com",
+            "m.media-amazon.com",
+            "lh3.googleusercontent.com",
+            "images-eu.ssl-images-amazon.com",
+            "cdn3.iconfinder.com",
+        ],
+    },
+    env: {
+        stripe_public_key: process.env.STRIPE_PUBLIC_KEY,
     },
 };

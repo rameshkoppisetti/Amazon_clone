@@ -1,17 +1,21 @@
 import Image from "next/image";
 import Link from "next/link";
 import { GlobeAltIcon } from "@heroicons/react/outline";
+//import { useEffect } from 'react';
 function Footer() {
+  const scrollToTop = () =>
+    window.scroll({ top: 100, left: 100, behavior: "smooth" });
   return (
     <div className="footer">
-      <Link href="/" scroll={true}>
-        <div className="cursor-pointer  text-center bg-amazon_blue-bu text-white py-3 hover:bg-gray-600">
-          <span className="text-sm ">Back to top</span>
-        </div>
-      </Link>
+      <div
+        onClick={scrollToTop}
+        className="cursor-pointer  text-center bg-amazon_blue-bu text-white py-3 hover:bg-gray-600"
+      >
+        <span className="text-sm ">Back to top</span>
+      </div>
 
       <div className="items-center    bg-amazon_blue-light text-gray-300 text-sm">
-        <div className=" py-12 pl-7 place-content-center grid grid-flow-row-dense md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+        <div className="border-b-1 white py-12 pl-9 place-content-center grid grid-flow-row-dense md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
           <ul className="space-x-3 mx-4 p-4">
             <li>
               <p className="link font-bold mx-2 text-white">Get to Know Us</p>
@@ -126,7 +130,7 @@ function Footer() {
         </div>
       </div>
 
-      <div className="pl-9 text-vs bg-amazon_blue text-gray-100">
+      <div className="pl-9 text-vs bg-amazon_blue text-gray-100 ">
         <div className="place-items-center align-items-center pt-5">
           <ul className="grid grid-flow-row-dense md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 ">
             <li className="p-3">

@@ -1,6 +1,5 @@
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
-import Image from "next/image";
 
 function Banner() {
   return (
@@ -17,7 +16,7 @@ function Banner() {
         <div>
           <img
             loading="lazy"
-            src="https://links.papareact.com/gi1"
+            src="https://m.media-amazon.com/images/I/61zLzPoxv9L._SX3000_.jpg"
             alt="banner1"
           />
         </div>
@@ -31,7 +30,29 @@ function Banner() {
         <div>
           <img
             loading="lazy"
-            src="https://links.papareact.com/7ma"
+            src="https://m.media-amazon.com/images/I/71i723QTb+L._SX3000_.jpg"
+            alt="banner2"
+          />
+        </div>
+
+        <div>
+          <img
+            loading="lazy"
+            src="https://m.media-amazon.com/images/I/51PL6-WGyML._SX3000_.jpg"
+            alt="banner2"
+          />
+        </div>
+        <div>
+          <img
+            loading="lazy"
+            src="https://m.media-amazon.com/images/I/61FuWeCuGCL._SX3000_.jpg"
+            alt="banner3"
+          />
+        </div>
+        <div>
+          <img
+            loading="lazy"
+            src="https://m.media-amazon.com/images/I/71l0LSU8I3L._SX3000_.jpg"
             alt="banner3"
           />
         </div>

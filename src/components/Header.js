@@ -4,17 +4,21 @@ import {
   SearchIcon,
   ShoppingCartIcon,
   GlobeAltIcon,
+  XIcon,
+  ChevronRightIcon,
+  ChevronDownIcon,
+  UserCircleIcon,
 } from "@heroicons/react/outline";
 import { signIn, signOut, useSession } from "next-auth/client";
 import { useRouter } from "next/router";
 import { useSelector } from "react-redux";
 import { selectItems } from "../slices/basketSlice";
+import { useState } from "react";
 
 function Header() {
   const router = useRouter();
   const [session] = useSession();
   const items = useSelector(selectItems);
-
   const checkInput = () => {
     const input = prompt("Do you want to Log Out?");
     if (!input || input == "no") return null;
@@ -23,8 +27,121 @@ function Header() {
       return null;
     }
   };
+  const [sidebaropen, setSidebaropen] = useState(false);
+  const handleToggle = () => {
+    setSidebaropen((prevSidebaropen) => !prevSidebaropen);
+    document.body.overflow = "hidden";
+  };
+  const handleClose = () => {
+    setSidebaropen((prevSidebaropen) => !prevSidebaropen);
+    document.body.overflow = "unset";
+  };
   return (
-    <header>
+    <header className="relative">
+      <div
+        className=" mt-0 bg-white w-85 absolute   h-screen duration-100  z-50 overflow-x-hidden overflow-y-scroll "
+        style={sidebaropen ? { left: "0px" } : { left: "-500px" }}
+      >
+        {/* <XIcon className="absolute h-8 text-white -right-8 top-2 cursor-pointer" onClick={handleClose}/> */}
+        <div className="bg-amazon_blue-light w-full h-14 flex items-center">
+          <div className="flex items-center mx-5 space-x-9   text-white font-bold">
+            {session ? (
+              <Image
+                src={session.user.image}
+                height={35}
+                width={35}
+                className="rounded-full"
+              />
+            ) : (
+              <UserCircleIcon className="h-8 text-white " />
+            )}
+            <span>Hello, {session ? session.user.name : "User"}</span>
+          </div>
+          <XIcon
+            className="h-8 text-white ml-27 cursor-pointer"
+            onClick={handleClose}
+          />
+        </div>
+
+        <div className="flex flex-col space-y-4">
+          <ul className="mt-6 border-b-2 border-gray-300">
+            <p className="font-bold ml-6 text-lg">SHOP BY CATEGORIES</p>
+            {session ? (
+              <li
+                onClick={signOut}
+                className="py-2 w-ful text-xm hover:bg-gray-300 px-6 cursor-pointer"
+              >
+                Sign Out
+              </li>
+            ) : (
+              <li
+                onClick={signIn}
+                className="py-2 w-ful text-xm hover:bg-gray-300 px-6 cursor-pointer"
+              >
+                Sign In
+              </li>
+            )}
+            <li className="py-2 w-ful text-xm hover:bg-gray-300 px-6 cursor-pointer">
+              TOYS AND GAMES
+            </li>
+            <li className="py-2 w-ful text-xm hover:bg-gray-300 px-6 capitalize cursor-pointer">
+              VIDEO GAMES
+            </li>
+            <li className="py-2 w-ful text-xm hover:bg-gray-300 px-6 capitalize cursor-pointer">
+              AMAZON MUSIC
+            </li>
+            <li className="py-2 w-ful flex justify-between items-center text-xm hover:bg-gray-300 px-6 capitalize cursor-pointer">
+              Echo & Alexa
+              <ChevronRightIcon className="h-4 text-gray-500 " />
+            </li>
+
+            <li className="py-2 w-ful flex justify-between items-center text-xm hover:bg-gray-300 px-6 capitalize cursor-pointer">
+              Fire TV
+              <ChevronRightIcon className="h-4 text-gray-500 " />
+            </li>
+            <li className="py-2 w-ful flex justify-between items-center text-xm hover:bg-gray-300 px-6 capitalize cursor-pointer">
+              Kindle E-Readers & eBooks
+              <ChevronRightIcon className="h-4 text-gray-500 " />
+            </li>
+            <li className="py-2 w-ful flex justify-between items-center text-xm hover:bg-gray-300 px-6 capitalize cursor-pointer">
+              Audible Audiobooks
+              <ChevronRightIcon className="h-4 text-gray-500 " />
+            </li>
+            <li className="py-2 w-ful flex justify-between items-center text-xm hover:bg-gray-300 px-6 capitalize cursor-pointer">
+              Amazon Prime Video
+              <ChevronRightIcon className="h-4 text-gray-500 " />
+            </li>
+            <li className="py-2 w-ful flex justify-between items-center text-xm hover:bg-gray-300 px-6 capitalize cursor-pointer">
+              Amazon Prime Music
+              <ChevronRightIcon className="h-4 text-gray-500 " />
+            </li>
+          </ul>
+
+          <ul className="mt-6 border-b-2 border-gray-300">
+            <p className="font-bold ml-6 text-lg">Shop By Department</p>
+            <li className="py-2 w-ful flex justify-between items-center text-xm hover:bg-gray-300 px-6 capitalize cursor-pointer">
+              Mobiles, Computers
+              <ChevronRightIcon className="h-4 text-gray-500 " />
+            </li>
+            <li className="py-2 w-ful flex justify-between items-center text-xm hover:bg-gray-300 px-6 capitalize cursor-pointer">
+              TV, Appliances, Electronics
+              <ChevronRightIcon className="h-4 text-gray-500 " />
+            </li>
+            <li className="py-2 w-ful flex justify-between items-center text-xm hover:bg-gray-300 px-6 capitalize cursor-pointer">
+              Men's Fashion
+              <ChevronRightIcon className="h-4 text-gray-500 " />
+            </li>
+            <li className="py-2 w-ful flex justify-between items-center text-xm hover:bg-gray-300 px-6 capitalize cursor-pointer">
+              Women's Fashion
+              <ChevronRightIcon className="h-4 text-gray-500 " />
+            </li>
+            <li className="py-2 w-ful flex justify-items-start items-center text-xm hover:bg-gray-300 px-6 capitalize cursor-pointer">
+              See all
+              <ChevronDownIcon className="h-4 ml-2 text-gray-500 " />
+            </li>
+          </ul>
+        </div>
+      </div>
       <div className="flex items-center bg-amazon_blue p-1 flex-grow py-3 h-14 ">
         <div
           onClick={() => router.push("/")}
@@ -48,14 +165,17 @@ function Header() {
         <div className="text-white font-sans flex items-center text-xs space-x-4 mx-4 whitespace-nowrap">
           <div
             onClick={!session ? signIn : checkInput}
-            className=" p-1  cursor-pointer hover:border 1px solid white "
+            className="p-1  cursor-pointer hover:border 1px solid white "
           >
             <p className="font-sans text-xs">
               {session ? "Hello, " + session.user.name : "Hello SignIn"}
             </p>
             <p className="font-bold  md:text-sm">Account & Lists</p>
           </div>
-          <div className="p-1 cursor-pointer  hover:border 1px solid white ">
+          <div
+            onClick={() => router.push("/orders")}
+            className="p-1 cursor-pointer  hover:border 1px solid white "
+          >
             <p className="font-sans text-xs">Returns</p>
             <p className="font-bold text-xs md:text-sm ">& Orders</p>
           </div>
@@ -72,7 +192,7 @@ function Header() {
         </div>
       </div>
       <div className="flex h-10 items-center space-x-3  pl-5 bg-amazon_blue-light text-white text-sm">
-        <p className="link  font-bold flex items-center">
+        <p onClick={handleToggle} className="link  font-bold flex items-center">
           <MenuIcon className="h-6 mr-1" />
           All
         </p>
