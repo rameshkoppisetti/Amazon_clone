@@ -4,7 +4,7 @@ import { StarIcon } from "@heroicons/react/solid";
 import Currency from "react-currency-formatter";
 import { useDispatch } from "react-redux";
 import { addToBasket } from "../slices/basketSlice";
-import { Router } from "../../../whatsapp-clone/whatsapp-clone/node_modules/next/router";
+
 const MAX_RATING = 5;
 const MIN_RATING = 3;
 function Product({ id, title, price, description, category, image }) {
