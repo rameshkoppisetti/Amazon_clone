@@ -9,9 +9,7 @@ import { loadStripe } from "@stripe/stripe-js";
 import axios from "axios";
 import Footer from "../components/Footer";
 
-const public_key = process.env.stripe_public_key;
-if(public_key==undefined)console.log("nothing here");
-console.log(public_key);
+
 const stripePromise = loadStripe(public_key);
 
 function Checkout() {
