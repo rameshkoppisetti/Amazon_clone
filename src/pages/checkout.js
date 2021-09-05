@@ -10,7 +10,7 @@ import axios from "axios";
 import Footer from "../components/Footer";
 
 
-const stripePromise = loadStripe(public_key);
+const stripePromise = loadStripe(process.env.stripe_public_key);
 
 function Checkout() {
   const items = useSelector(selectItems);
