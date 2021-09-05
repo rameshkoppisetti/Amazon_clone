@@ -11,13 +11,8 @@ module.exports = {
         ],
     },
     env: {
-        stripe_public_key: `${process.env.STRIPE_PUBLIC_KEY}`,
-        STRIPE_SECRET_KEY: `${process.env.STRIPE_SECRET_KEY}`,
-        HOST: `${process.env.HOST}`,
-        STRIPE_SIGNING_SECRET: `${process.env.STRIPE_SIGNING_SECRET}`,
-        GOOGLE_SECRET:`${process.env.GOOGLE_SECRET}`,
-        GOOGLE_ID:`${process.env.GOOGLE_ID}`,
-        NEXTAUTH_URL:`${process.env.NEXTAUTH_URL}`,
+        stripe_public_key: STRIPE_PUBLIC_KEY,
+       
         
     },
 };
