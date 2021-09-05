@@ -9,6 +9,7 @@ function Orders({ orders }) {
   const [session] = useSession();
 
   console.log(orders);
+  
   return (
     <div>
       <Header />
