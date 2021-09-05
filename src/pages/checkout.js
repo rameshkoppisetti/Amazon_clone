@@ -9,7 +9,7 @@ import { loadStripe } from "@stripe/stripe-js";
 import axios from "axios";
 import Footer from "../components/Footer";
 
-const stripePromise = loadStripe(process.env.stripe_public_key);
+const stripePromise = loadStripe(process.env.stripe_public_key.toString());
 
 function Checkout() {
   const items = useSelector(selectItems);
