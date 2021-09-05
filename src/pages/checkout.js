@@ -9,7 +9,9 @@ import { loadStripe } from "@stripe/stripe-js";
 import axios from "axios";
 import Footer from "../components/Footer";
 
-const stripePromise = loadStripe(process.env.stripe_public_key.toString());
+const public_key: string = process.env.STRIPE_WEBHOOK_SECRET!;
+console.log(public_key);
+const stripePromise = loadStripe(public_key);
 
 function Checkout() {
   const items = useSelector(selectItems);
