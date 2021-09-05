@@ -9,7 +9,7 @@ import { loadStripe } from "@stripe/stripe-js";
 import axios from "axios";
 import Footer from "../components/Footer";
 
-const public_key: string = process.env.STRIPE_WEBHOOK_SECRET!;
+const public_key = (process.env.stripe_public_key);
 console.log(public_key);
 const stripePromise = loadStripe(public_key);
 
