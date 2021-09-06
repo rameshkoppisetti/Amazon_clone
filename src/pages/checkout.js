@@ -10,10 +10,10 @@ import axios from "axios";
 import Footer from "../components/Footer";
 
 
-const public_key=`${process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY}`;
-console.log("this was fucking");
+const public_key=process.env.stripe_public_key;
+
 console.log(public_key);
-const stripePromise = loadStripe(public_key);
+const stripePromise = loadStripe(process.env.stripe_public_key);
 
 function Checkout() {
   const items = useSelector(selectItems);
@@ -34,6 +34,7 @@ function Checkout() {
       sessionId: checkoutSession.data.id,
     });
     if (result.error) {
+      console.log("something went wrong here");
       alert(result.error.message);
     }
   };
@@ -109,12 +110,3 @@ function Checkout() {
 
 export default Checkout;
 
-export async function getServerSideProps(context) {
-  const session = await getSession(context);
-
-  return {
-    props: {
-      session,
-    },
-  };
-}
