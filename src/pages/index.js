@@ -6,6 +6,7 @@ import Footer from "../components/Footer";
 import { getSession } from "next-auth/client";
 import { useRouter } from "next/router";
 
+
 export default function Home({ products }) {
   const router = useRouter();
 
