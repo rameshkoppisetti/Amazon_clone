@@ -33,3 +33,14 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 ## See More
 ## Payment page
 ![STRIPE SCREENSHOT](checkoutpage.png?raw=true "Stripe Screenshot")
+## Author
+### *Satya Ramesh Koppisetti*
+*I am a passionate Self-taught Software Engineer which likes to push himself on various fronts of technologies.*  4
+
+For more exciting updates follow me,
+
+<a href="https://www.linkedin.com/in/rameshjr/" target="_blank"><img src="https://github.com/yuvraj24/LiveSmashBar/blob/master/images/linkedin.png" width="40" height="40"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://github.com/rameshkoppisetti" target="_blank"><img src="https://github.com/yuvraj24/LiveSmashBar/blob/master/images/github.png" height="40"></a>
+
+## Reference
+This application was developed with the inspiration from Sonny Sangha (Papa React)
+- here is his github ssangha [sssangha](https://github.com/sonnysangha)
