@@ -18,6 +18,7 @@ for this project as your token of love does wonders.
 
 ## Major Technologies Used
 - Next.js
+- React
 - Stripe
 - Tailwind CSS
 - Material UI
