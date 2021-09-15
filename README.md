@@ -10,6 +10,7 @@ Amazon Clone provides an overview on how to create a full-stack web application 
 * *Vercel Deployment*
 * *Respostive web Design*
 * *Stripe payment page*
+* *Orders Page*
 
 ```
 If you like the work then don't forget to hit that ⭐ button to show some appreciation & love
@@ -22,7 +23,7 @@ for this project as your token of love does wonders.
 - Stripe
 - Tailwind CSS
 - Material UI
-- Google Firebase
+- Firebase Firestore Database
 - Fakestore API
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app
