@@ -8,10 +8,8 @@ Amazon Clone provides an overview on how to create a full-stack web application 
 ### You can see the following features in action in this repository,
 * *Google Authentication*
 * *Vercel Deployment*
-* *Instant & Realtime textual One to One chat*
-* *User's Online/Offline availability*
-* *Last Seen time*
-* *WhatsApp Web with realtime chat.*
+* *Respostive web Design*
+* *Stripe payment page*
 
 ```
 If you like the work then don't forget to hit that ⭐ button to show some appreciation & love
@@ -24,6 +22,7 @@ for this project as your token of love does wonders.
 - Tailwind CSS
 - Material UI
 - Google Firebase
+- Fakestore API
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app
 
