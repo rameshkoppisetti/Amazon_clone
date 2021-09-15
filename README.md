@@ -25,4 +25,4 @@ Run commands
 
 ### If you see the window below then you are set to build AMAZON 2.0!
 
-![Template Screenshot](Screenshot(149).png?raw=true "Template Screenshot")
+![Template Screenshot](projectview.png?raw=true "Template Screenshot")
