@@ -37,7 +37,7 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 ![STRIPE SCREENSHOT](checkoutpage.png?raw=true "Stripe Screenshot")
 ## Author
 ### *Satya Ramesh Koppisetti*
-*I am a passionate Self-taught Software Engineer which likes to push himself on various fronts of technologies.*  4
+*I am a passionate Self-taught Software Engineer who likes to push himself on various fronts of technologies.*  
 
 For more exciting updates follow me,
 
